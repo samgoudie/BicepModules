@@ -122,8 +122,8 @@ resource DSCCreateForest 'Microsoft.Compute/virtualMachines/extensions@2022-03-0
     typeHandlerVersion: '2.19'
     autoUpgradeMinorVersion: true
     settings: {
-      ModulesUrl: uri('https://github.com/samgoudie/BicepModules/blob/main/DomainController/', 'CreateDomainController.zip${artifactsLocationSasToken}?raw=true')
-      ConfigurationFunction: 'CreateDomainController.ps1\\Main'
+      ModulesUrl: uri('https://github.com/samgoudie/BicepModules/blob/main/DomainController/', 'DomainControllerDSC.zip${artifactsLocationSasToken}?raw=true')
+      ConfigurationFunction: 'DomainControllerDSC.ps1\\Main'
 //      ModulesUrl: uri('https://raw.githubusercontent.com/SMBrook/SQLAOAG/main/', 'DSC/CreateADPDC.zip${artifactsLocationSasToken}')
 //      ConfigurationFunction: 'CreateADPDC.ps1\\CreateADPDC'
       Properties: {
