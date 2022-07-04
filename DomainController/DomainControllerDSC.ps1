@@ -80,7 +80,7 @@ Node localhost
             Ensure = 'Present'
             Name   = 'RSAT-Role-Tools'
         }      
-        
+
         xADDomain CreateForest 
         { 
             DomainName = $domainName           
@@ -89,7 +89,7 @@ Node localhost
             DatabasePath = "C:\Windows\NTDS"
             LogPath = "C:\Windows\NTDS"
             SysvolPath = "C:\Windows\Sysvol"
-            DependsOn = '[WindowsFeature]ADDS_Install'
+            DependsOn = "[WindowsFeature]ADDS_Install"
         }
 
   }
