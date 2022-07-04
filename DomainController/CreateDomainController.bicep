@@ -128,7 +128,7 @@ resource DSCCreateForest 'Microsoft.Compute/virtualMachines/extensions@2022-03-0
 //      ConfigurationFunction: 'CreateADPDC.ps1\\CreateADPDC'
       Properties: {
         domainName: domainName
-        domainAdminCreds: {
+        domainAdminCredentials: {
           UserName: 'TestAdmin'
           Password: 'PrivateSettingsRef:adminPassword'
         }
