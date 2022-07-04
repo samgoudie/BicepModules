@@ -80,12 +80,7 @@ Node localhost
             Ensure = 'Present'
             Name   = 'RSAT-Role-Tools'
         }      
- 
-        WindowsFeature RSAT_GPMC 
-        {
-            Ensure = 'Present'
-            Name   = 'GPMC'
-        } 
+        
         xADDomain CreateForest 
         { 
             DomainName = $domainName           
