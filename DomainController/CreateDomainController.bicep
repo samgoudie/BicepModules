@@ -64,7 +64,7 @@ resource DC1 'Microsoft.Compute/virtualMachines@2022-03-01' = {
         publisher: 'MicrosoftWindowsServer'
         offer: 'WindowsServer'
         sku: '2019-Datacenter'
-        version: 'latest'
+        version: '17763.3131.220505'
       }
       osDisk: {
         createOption: 'FromImage'
