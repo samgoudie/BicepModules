@@ -9,7 +9,7 @@ description: Simple deployment of a virtual WAN with single secure hub across mu
 
 Simple deployment of a virtual WAN with single secure hub across multiple zones.
 
-[Virtual Wan Service](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about)
+[Virtual Wan About](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-about)  
 [Virtual Wan FAQ](https://docs.microsoft.com/azure/virtual-wan/virtual-wan-faq)
 
 `Tags:network, virtual network, virtual wan, vwan, securehub, azure firewall, Microsoft.Network/virtualWans, [parameters('vWanSku')], Microsoft.Network/virtualHubs, Microsoft.Network/vpnSites, Microsoft.Network/vpnGateways, Microsoft.Network/azureFirewalls`
