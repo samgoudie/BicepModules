@@ -7,13 +7,16 @@ param availabilityZones array = [
   '3'
 ]
 @description('Set VWan name')
-param virtualWANName = 'testVWan'
+param virtualWANName string = 'testVWan'
+
 @description('Set prefix for virtual Wan Hub')
-param virtualHubSubnetPrefix = '10.10.0.0/23'
+param virtualHubSubnetPrefix string = '10.10.0.0/23'
+
 @description('Set VWan Hub name')
-param virtualHubName = 'hub-NE'
+param virtualHubName string = 'hub-NE'
+
 @description('set azfw name in hub')
-param azfwName = 'testAZFWHub'
+param azfwName string = 'testAZFWHub'
 
 
 resource azfwTestVWan 'Microsoft.Network/virtualWans@2021-08-01' = {
