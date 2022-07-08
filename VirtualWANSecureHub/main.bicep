@@ -1,16 +1,20 @@
+@description('Get resource group location and set this as default for all resources' )
 param location string = resourceGroup().location
-
 @description('Availability zone numbers e.g. 1,2,3.')
 param availabilityZones array = [
   '1'
   '2'
   '3'
 ]
+@description('Set VWan name')
+param virtualWANName = 'testVWan'
+@description('Set prefix for virtual Wan Hub')
+param virtualHubSubnetPrefix = '10.10.0.0/23'
+@description('Set VWan Hub name')
+param virtualHubName = 'hub-NE'
+@description('set azfw name in hub')
+param azfwName = 'testAZFWHub'
 
-var virtualHubSubnetPrefix = '10.10.0.0/23'
-var virtualHubName = 'Hub-NE'
-var azfwName = 'testAZFWHub'
-var virtualWANName = 'TestVWANAZFW'
 
 resource azfwTestVWan 'Microsoft.Network/virtualWans@2021-08-01' = {
   name: virtualWANName
@@ -37,6 +41,7 @@ resource azfw 'Microsoft.Network/azureFirewalls@2021-08-01' = {
   zones: ((length(availabilityZones) == 0) ? json('null') : availabilityZones)
   properties: {
     sku: {
+      name: 'AZFW_Hub'
       tier: 'Standard'
     }
     hubIPAddresses: {
