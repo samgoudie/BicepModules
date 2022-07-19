@@ -1,0 +1,9 @@
+{
+    "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
+    "type": "QuickStart",
+    "itemDisplayName": "Creates zonal Secure Virtual WAN Hub",
+    "description": "This template allows you to create virtual WAN Hub including an Azure firewall (secure hub) deployed over multiple availability zones.",
+    "summary": "Creates Secure Virtual WAN Hub cross zone",
+    "githubUsername": "samgoudie",
+    "dateUpdated": "2022-07-19"
+  }
